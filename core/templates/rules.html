@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="container py-5">
+    <h2 class="fw-bold mb-4 border-bottom pb-2">
+        貸出しガイドライン・利用規則
+    </h2>
+
+    <div class="row">
+        <div class="col-md-6">
+            <h5 class="text-primary">1. 貸出し手続き</h5>
+            <ul>
+                <li>アカウントを登録し、ログインします。</li>
+                <li>設備を検索し、「貸出し申請」ボタンをクリックします。</li>
+                <li>管理者の承認を待ちます。</li>
+            </ul>
+        </div>
+
+        <div class="col-md-6">
+            <h5 class="text-danger">2. 取扱い・管理に関する規則</h5>
+            <ul>
+                <li>機器を破損したり、構造を変更したりしないでください。</li>
+                <li>申請した期限内に必ず返却してください。</li>
+                <li>破損した場合は、速やかにシステムから報告してください。</li>
+            </ul>
+        </div>
+    </div>
+</div>
+{% endblock %}

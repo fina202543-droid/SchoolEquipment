@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="py-5 text-center">
+    <h1 class="display-4 fw-bold text-primary">
+        フォーム情報アカデミー専門学校
+    </h1>
+
+    <p class="lead mt-3">
+        学校備品の閲覧および貸出し申請ができるシステムへようこそ。
+    </p>
+
+    <div class="mt-5 row justify-content-center">
+        <div class="col-md-4">
+            <div class="card border-0 shadow-sm p-4">
+                <i class="bi bi-search text-primary fs-1 mb-3"></i>
+                <h5>簡単検索</h5>
+                <p class="small text-muted">
+                    倉庫内にある機器の画像や状態を一覧で確認できます。
+                </p>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card border-0 shadow-sm p-4">
+                <i class="bi bi-pencil-square text-success fs-1 mb-3"></i>
+                <h5>スムーズな申請</h5>
+                <p class="small text-muted">
+                    ワンクリックで貸出し申請を送信できます。
+                </p>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card border-0 shadow-sm p-4">
+                <i class="bi bi-shield-check text-warning fs-1 mb-3"></i>
+                <h5>透明な管理</h5>
+                <p class="small text-muted">
+                    貸出し履歴や備品の状態を分かりやすく確認できます。
+                </p>
+            </div>
+        </div>
+    </div>
+
+    {% if not user.is_authenticated %}
+    <div class="mt-5">
+        <a href="{% url 'login' %}" class="btn btn-primary btn-lg px-5 rounded-pill">
+            利用を開始する
+        </a>
+    </div>
+    {% endif %}
+</div>
+{% endblock %}
